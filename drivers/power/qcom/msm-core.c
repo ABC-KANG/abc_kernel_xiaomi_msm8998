@@ -114,6 +114,10 @@ DEFINE_PER_CPU(struct cpu_pstate_pwr *, ptable);
 static struct cpu_pwr_stats cpu_stats[NR_CPUS];
 ALLOCATE_2D_ARRAY(uint32_t);
 
+/*
+ * Userspace checks for the presence of poll_ms and disabled, so keep them
+ * even when ENABLE_TSENS_SAMPLING isn't used.
+ */
 static __read_mostly int poll_ms;
 static __read_mostly int poll_ms_dummy;
 module_param_named(polling_interval, poll_ms_dummy, int,
