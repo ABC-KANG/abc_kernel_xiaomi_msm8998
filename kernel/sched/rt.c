@@ -1505,6 +1505,7 @@ enqueue_task_rt(struct rq *rq, struct task_struct *p, int flags)
 	schedtune_enqueue_task(p, cpu_of(rq));
 	sched_rt_update_capacity_req(rq);
 	cpufreq_update_this_cpu(rq, SCHED_CPUFREQ_RT);
+	schedtune_enqueue_task(p, cpu_of(rq));
 }
 
 static void dequeue_task_rt(struct rq *rq, struct task_struct *p, int flags)
@@ -1531,6 +1532,7 @@ static void dequeue_task_rt(struct rq *rq, struct task_struct *p, int flags)
 	schedtune_dequeue_task(p, cpu_of(rq));
 	sched_rt_update_capacity_req(rq);
 	cpufreq_update_this_cpu(rq, SCHED_CPUFREQ_RT);
+	schedtune_dequeue_task(p, cpu_of(rq));
 }
 
 /*
