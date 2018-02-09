@@ -2,6 +2,7 @@
  * Completely Fair Scheduling (CFS) Class (SCHED_NORMAL/SCHED_BATCH)
  *
  *  Copyright (C) 2007 Red Hat, Inc., Ingo Molnar <mingo@redhat.com>
+ *  Copyright (C) 2018 XiaoMi, Inc.
  *
  *  Interactivity improvements by Mike Galbraith
  *  (C) 2007 Mike Galbraith <efault@gmx.de>
@@ -6538,6 +6539,7 @@ static int find_new_capacity(struct energy_env *eenv,
 {
 	int idx, max_idx = sge->nr_cap_states - 1;
 	unsigned long util = group_max_util(eenv);
+	int idx, max_idx = sge->nr_cap_states - 1;
 
 	 /* default is max_cap if we don't find a match */
 	eenv->cap_idx = max_idx;
