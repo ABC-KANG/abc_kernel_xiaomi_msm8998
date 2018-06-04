@@ -255,5 +255,8 @@
 		qcom,mdss-dsi-pan-fps-update = "dfps_immediate_porch_mode_vfp";
 		qcom,partial-update-enabled;
 		qcom,panel-roi-alignment = <8 0 8 0 1080 0>;
+		qcom,ulps-enabled;
+		qcom,suspend-ulps-enabled;
+		qcom,panel-allow-phy-poweroff;
 	};
 };
